@@ -28,7 +28,7 @@ for _ in range(NUM_ROLLS):
     if len(set(res)) == 1:
         all_same += 1
     percent = (_ + 1) / NUM_ROLLS * 100
-    print(f"\r{_ + 1} / {NUM_ROLLS} ({percent:.2f}%)", end="", flush=True)
+    print(f"\r{_ + 1} / {NUM_ROLLS} ({percent:.2f}%) [{'#' * int(percent/5)}{'_' * (20 - int(percent/5))}]", end="", flush=True)
 
 res_count_df = pd.DataFrame(res_count, columns=["Dice", "count"])
 res_Diceface_df = pd.DataFrame(res_Diceface, columns=["DiceFace", "count"])
